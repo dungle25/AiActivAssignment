@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
+import com.dungle.android.aiactivassignment.R
 import com.dungle.android.aiactivassignment.common.Utils
 import com.dungle.android.aiactivassignment.databinding.FlightItemBinding
 import com.dungle.android.aiactivassignment.domain.model.Flight
@@ -44,9 +45,9 @@ class FlightAdapter(private val data: MutableList<Flight>) : RecyclerView.Adapte
         @RequiresApi(Build.VERSION_CODES.O)
         fun bindView(flight: Flight) {
             itemBinding.tvName.text = flight.name
-            itemBinding.tvFlightNumber.text = flight.flightNumber.toString()
+            itemBinding.tvFlightNumber.text = itemBinding.tvFlightNumber.context.getString(R.string.text_flight_number, flight.flightNumber.toString())
             itemBinding.tvLaunchDate.text = Utils.getDate(flight.dateUtc)
-            itemBinding.tvLaunchTime.text = Utils.getTime(flight.dateUtc)
+            itemBinding.tvLaunchTime.text = itemBinding.tvLaunchTime.context.getString(R.string.text_launch_time, Utils.getTime(flight.dateUtc))
         }
     }
 }

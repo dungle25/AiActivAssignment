@@ -1,6 +1,7 @@
-package com.dungle.android.aiactivassignment.data.local.entity
+package com.dungle.android.aiactivassignment.data.local
 
 import androidx.room.*
+import com.dungle.android.aiactivassignment.data.local.entity.FlightEntity
 
 @Dao
 interface FlightDao {

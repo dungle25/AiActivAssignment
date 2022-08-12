@@ -1,7 +1,7 @@
 package com.dungle.android.aiactivassignment.data.repository
 
 import com.dungle.android.aiactivassignment.common.Resource
-import com.dungle.android.aiactivassignment.data.local.entity.FlightDatabase
+import com.dungle.android.aiactivassignment.data.local.FlightDatabase
 import com.dungle.android.aiactivassignment.data.remote.FlightApi
 import com.dungle.android.aiactivassignment.domain.model.Flight
 import com.dungle.android.aiactivassignment.domain.repository.FlightRepository

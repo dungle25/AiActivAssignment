@@ -1,5 +1,6 @@
 package com.dungle.android.aiactivassignment.domain.model
 
+import com.dungle.android.aiactivassignment.data.local.entity.DeletedFlightEntity
 import com.dungle.android.aiactivassignment.data.local.entity.FlightEntity
 
 data class Flight(
@@ -10,5 +11,9 @@ data class Flight(
 ) {
     fun toFlightEntity(): FlightEntity {
         return FlightEntity(id = id, dateUtc = dateUtc, flightNumber = flightNumber, name = name)
+    }
+
+    fun toDeletedFlightEntity(): DeletedFlightEntity {
+        return DeletedFlightEntity(id = id, dateUtc = dateUtc, flightNumber = flightNumber, name = name)
     }
 }

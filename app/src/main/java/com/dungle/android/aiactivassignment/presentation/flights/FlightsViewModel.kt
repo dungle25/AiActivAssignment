@@ -49,7 +49,7 @@ class FlightsViewModel @Inject constructor(
                 } else {
                     onAddItem(event.item)
                 }
-                saveToDataStore(dataStore, event.isRemoved)
+//                saveToDataStore(dataStore, event.isRemoved)
             }
         }
     }
@@ -85,7 +85,6 @@ class FlightsViewModel @Inject constructor(
             val isDeleted = preferences[key] == true
             _state.value = FlightsState(isRefreshing = true)
             if (searchQuery.isNullOrEmpty()) {
-                // Assume that if there are items deleted before, the data should only be loaded from local
                 repository.getFlights(fetchFromRemote && !isDeleted)
                     .collect { result ->
                         handleResult(result)

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ai Activ Assignment</string>
+    <string name="text_flight_number">Flight number: %s</string>
+    <string name="text_launch_time">Launch time: %s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_search">Search</string>
+</resources>
